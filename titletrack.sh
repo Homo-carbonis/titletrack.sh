@@ -7,7 +7,7 @@ for file in "$@"; do
   track="$(printf "%0${#ntracks}d" ${_track%%/*})"
   _format="$(ffprobe -loglevel error -select_streams 0 -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 "file:$file")"
   format="${_format%% }"
-  newfile="$(dirname file)/$track-$title.$format"
+  newfile="$(dirname file)/$track - $title.$format"
   echo "$newfile"
   mv "$file" "$newfile"
 done
