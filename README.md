@@ -1,7 +1,7 @@
 # titletrack.sh
 A script to give media files meaningful names based on metadata.
 
-Requires avprobe/ffprobe
+Requires avprobe/ffprobe, usually distributed along with [ffmpeg](https://ffmpeg.org).
 
 ## Usage:
     titletrack.sh [FILE]
